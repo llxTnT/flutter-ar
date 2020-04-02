@@ -1,34 +1,31 @@
-group 'io.github.olexale.arkit_plugin'
-version '1.0-SNAPSHOT'
-
 buildscript {
+    ext.kotlin_version = '1.3.50'
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
-rootProject.allprojects {
+allprojects {
     repositories {
         google()
         jcenter()
     }
 }
 
-apply plugin: 'com.android.library'
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
 
-android {
-    compileSdkVersion 28
-
-    defaultConfig {
-        minSdkVersion 16
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-    lintOptions {
-        disable 'InvalidPackage'
-    }
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
