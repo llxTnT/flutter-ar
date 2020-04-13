@@ -22,11 +22,11 @@ class _PlaneDetectionPageState extends State<PlaneDetectionPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: const Text('Plane Detection Sample')),
+        appBar: AppBar(title: const Text('Plane Detection')),
         body: Container(
           child: ARKitSceneView(
-            showFeaturePoints: true,
-            planeDetection: ARPlaneDetection.horizontal,
+            showFeaturePoints: false,
+            planeDetection: ARPlaneDetection.vertical,
             onARKitViewCreated: onARKitViewCreated,
           ),
         ),
@@ -63,7 +63,7 @@ class _PlaneDetectionPageState extends State<PlaneDetectionPage> {
       height: anchor.extent.z,
       materials: [
         ARKitMaterial(
-          transparency: 0.5,
+          transparency: 1,
           diffuse: ARKitMaterialProperty(color: Colors.red),
         )
       ],

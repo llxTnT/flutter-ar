@@ -1,3 +1,4 @@
+import 'package:FlutterARKit/plane_bulid_item_page.dart';
 import 'package:flutter/material.dart';
 
 import 'plane_detection_page.dart';
@@ -8,6 +9,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final samples = [
+      Sample(
+        'Plane Detection',
+        'Detects horizontal plane.',
+        Icons.blur_on,
+            () => Navigator.of(context).push<void>(
+            MaterialPageRoute(builder: (c) => PlaneDetectionPage())),
+      ),
+      Sample(
+        'Plane build Item Detection',
+        'Detects horizontal plane.',
+        Icons.blur_on,
+            () => Navigator.of(context).push<void>(
+            MaterialPageRoute(builder: (c) => PlaneBuildItemPage())),
+      )
+
    /*   Sample(
         'Hello World',
         'The simplest scene with all geometries.',
@@ -36,13 +52,7 @@ class MyApp extends StatelessWidget {
             () => Navigator.of(context)
             .push<void>(MaterialPageRoute(builder: (c) => TapPage())),
       ),*/
-      Sample(
-        'Plane Detection',
-        'Detects horizontal plane.',
-        Icons.blur_on,
-            () => Navigator.of(context).push<void>(
-            MaterialPageRoute(builder: (c) => PlaneDetectionPage())),
-      )/*,
+  /*,
       Sample(
         'Distance tracking',
         'Detects horizontal plane and track distance on it.',
