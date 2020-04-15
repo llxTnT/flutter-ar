@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       Sample(
         'Plane build Item Detection',
-        'Detects horizontal plane.',
+        'Detects horizontal plane,and build item',
         Icons.blur_on,
             () => Navigator.of(context).push<void>(
             MaterialPageRoute(builder: (c) => PlaneBuildItemPage())),
