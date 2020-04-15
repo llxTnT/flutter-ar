@@ -1,3 +1,4 @@
+import 'package:FlutterARKit/plane_axis_item_page.dart';
 import 'package:FlutterARKit/plane_bulid_item_page.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,13 @@ class MyApp extends StatelessWidget {
         Icons.blur_on,
             () => Navigator.of(context).push<void>(
             MaterialPageRoute(builder: (c) => PlaneBuildItemPage())),
+      ),
+      Sample(
+        'Plane build Axis Line Detection',
+        'Detects horizontal plane,and build axis',
+        Icons.blur_on,
+            () => Navigator.of(context).push<void>(
+            MaterialPageRoute(builder: (c) => PlaneBuildAxisPage())),
       )
 
    /*   Sample(

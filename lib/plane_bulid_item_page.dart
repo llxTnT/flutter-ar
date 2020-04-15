@@ -102,7 +102,7 @@ class _PlaneBuildItemPageState extends State<PlaneBuildItemPage> {
   void _addEarth(ARKitController controller) {
     this.itemMaterial = ARKitMaterial(
       transparency: 1.0,
-      diffuse: ARKitMaterialProperty(image: "magician.jpg"),
+      diffuse: ARKitMaterialProperty(image: "magician.png"),
     );
 
     this.itemBox = ARKitBox(
