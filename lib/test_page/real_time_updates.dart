@@ -26,6 +26,7 @@ class _RealTimeUpdatesPageState extends State<RealTimeUpdatesPage> {
       ),
       body: Container(
         child: ARKitSceneView(
+
           onARKitViewCreated: _onARKitViewCreated,
         ),
       ),
@@ -49,18 +50,18 @@ class _RealTimeUpdatesPageState extends State<RealTimeUpdatesPage> {
 
     this.arkitController = arkitController;
     this.arkitController.updateAtTime = (time) {
-      print("is busy:"+busy.toString());
+      //print("is busy:"+busy.toString());
       if (busy == false) {
         busy = true;
         this.arkitController.performHitTest(x: 0.5, y: 0.5).then((results) {
           if (results.isNotEmpty) {
             final point = results.firstWhere(
-                (o) => o.type == ARKitHitTestResultType.featurePoint,
+                    (o) => o.type == ARKitHitTestResultType.featurePoint,
                 orElse: () => null);
             if (point == null) {
               return;
             }
-            print("point "+point.toString());
+          //  print("point "+point.toString());
 
             final position = vector.Vector3(
               point.worldTransform.getColumn(3).x,
@@ -68,10 +69,10 @@ class _RealTimeUpdatesPageState extends State<RealTimeUpdatesPage> {
               point.worldTransform.getColumn(3).z,
             );
 
-            print("point world pos  x: "+position.x.toStringAsFixed(4)+
+          /*  print("point world pos  x: "+position.x.toStringAsFixed(4)+
                 "  y:"+position.y.toStringAsFixed(4) +
                 "  z:"+position.z.toStringAsFixed(4));
-
+*/
             final ARKitNode newNode = ARKitNode(
               geometry: sphere,
               position: position,

@@ -1,8 +1,11 @@
-import 'package:FlutterARKit/plane_axis_item_page.dart';
-import 'package:FlutterARKit/plane_bulid_item_page.dart';
+import 'package:FlutterARKit/demo_page/magician_demo_page.dart';
+import 'package:FlutterARKit/test_page/plane_axis_item_page.dart';
+import 'package:FlutterARKit/test_page/plane_bulid_item_page.dart';
+import 'package:FlutterARKit/test_page/real_time_updates.dart';
+import 'package:FlutterARKit/test_page/tap_page.dart';
 import 'package:flutter/material.dart';
 
-import 'plane_detection_page.dart';
+import 'test_page/plane_detection_page.dart';
 
 void main() => runApp(MaterialApp(home: MyApp()));
 
@@ -11,13 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final samples = [
       Sample(
-        'Plane Detection',
-        'Detects horizontal plane.',
+        'Magician Demo',
+        'magician demo Page.',
         Icons.blur_on,
             () => Navigator.of(context).push<void>(
-            MaterialPageRoute(builder: (c) => PlaneDetectionPage())),
+            MaterialPageRoute(builder: (c) => MagicianDemoPage())),
       ),
-      Sample(
+
+
+      /*Sample(
         'Plane build Item Detection',
         'Detects horizontal plane,and build item',
         Icons.blur_on,
@@ -30,7 +35,7 @@ class MyApp extends StatelessWidget {
         Icons.blur_on,
             () => Navigator.of(context).push<void>(
             MaterialPageRoute(builder: (c) => PlaneBuildAxisPage())),
-      )
+      )*/
 
    /*   Sample(
         'Hello World',
@@ -52,14 +57,14 @@ class MyApp extends StatelessWidget {
         Icons.language,
             () => Navigator.of(context)
             .push<void>(MaterialPageRoute(builder: (c) => EarthPage())),
-      ),
+      ),*/
       Sample(
         'Tap',
         'Sphere which handles tap event.',
         Icons.touch_app,
             () => Navigator.of(context)
             .push<void>(MaterialPageRoute(builder: (c) => TapPage())),
-      ),*/
+      ),
   /*,
       Sample(
         'Distance tracking',
@@ -158,14 +163,14 @@ class MyApp extends StatelessWidget {
         Icons.widgets,
             () => Navigator.of(context).push<void>(
             MaterialPageRoute(builder: (c) => WidgetProjectionPage())),
-      ),
+      ),*/
       Sample(
         'Real Time Updates',
         'Calls a function once per frame',
         Icons.timer,
             () => Navigator.of(context).push<void>(
             MaterialPageRoute(builder: (c) => RealTimeUpdatesPage())),
-      ),*/
+      ),
     ];
 
     return Scaffold(

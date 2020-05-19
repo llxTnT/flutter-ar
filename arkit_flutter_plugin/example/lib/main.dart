@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         Icons.adb,
             () => Navigator.of(context)
             .push<void>(MaterialPageRoute(builder: (c) => MagicianDemoPage())),
-      )
+      ),
     /*  Sample(
         'Hello World',
         'The simplest scene with all geometries.',
@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
         Icons.language,
         () => Navigator.of(context)
             .push<void>(MaterialPageRoute(builder: (c) => EarthPage())),
-      ),
+      ),*/
       Sample(
         'Tap',
         'Sphere which handles tap event.',
@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
         () => Navigator.of(context)
             .push<void>(MaterialPageRoute(builder: (c) => TapPage())),
       ),
-      Sample(
+     /* Sample(
         'Plane Detection',
         'Detects horizontal plane.',
         Icons.blur_on,

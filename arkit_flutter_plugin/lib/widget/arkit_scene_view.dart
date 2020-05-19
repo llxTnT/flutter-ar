@@ -146,6 +146,7 @@ class ARKitSceneView extends StatefulWidget {
 }
 
 class _ARKitSceneViewState extends State<ARKitSceneView> {
+
   @override
   Widget build(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.iOS) {

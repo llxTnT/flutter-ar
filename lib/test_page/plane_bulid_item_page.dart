@@ -55,7 +55,6 @@ class _PlaneBuildItemPageState extends State<PlaneBuildItemPage> {
     this.arkitController.onUpdateNodeForAnchor = _handleUpdateAnchor;
     this.arkitController.onNodePinch = _handleNodePinch;
     this.arkitController.onNodePan=_handleNodePan;
-    this.arkitController.onNodeTap=_handleNodeTap;
     print("on view create");
   }
 
@@ -163,7 +162,4 @@ class _PlaneBuildItemPageState extends State<PlaneBuildItemPage> {
     }
   }
 
-  void _handleNodeTap(String text) {
-      print("node on tap:" +text);
-  }
 }
