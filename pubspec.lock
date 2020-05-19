@@ -16,12 +16,12 @@ packages:
     source: hosted
     version: "1.5.2"
   arkit_plugin:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
-      name: arkit_plugin
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.4.1"
+      path: arkit_flutter_plugin
+      relative: true
+    source: path
+    version: "0.5.0"
   async:
     dependency: transitive
     description:
