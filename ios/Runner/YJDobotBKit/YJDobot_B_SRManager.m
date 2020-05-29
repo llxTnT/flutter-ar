@@ -141,7 +141,7 @@ typedef void(^reBlock)(YJDobotDev_Connected *dev,YJDobot_B_ReMsg *reMsg);
     NSAssert(data != nil, @"写入数据不能为空");
     NSAssert(cp != nil, @"写入设备不能为空");
     NSAssert(chara != nil, @"写入特征值不能为空");
-    NSLog(@"写入data = %@",data);
+   // NSLog(@"写入data = %@",data);
     [cp writeValue:data forCharacteristic:chara type:CBCharacteristicWriteWithoutResponse];
 }
 

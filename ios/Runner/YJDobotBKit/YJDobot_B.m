@@ -169,7 +169,7 @@
     }];
     
     [babyBluetooth setBlockOnDidWriteValueForCharacteristic:^(CBCharacteristic *characteristic, NSError *error) {
-        YJLog(@"写入data 1111 %@",characteristic.value);
+       // YJLog(@"写入data 1111 %@",characteristic.value);
     }];
     
     [babyBluetooth setBlockOnReadValueForCharacteristic:^(CBPeripheral *peripheral, CBCharacteristic *characteristic, NSError *error) {

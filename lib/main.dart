@@ -5,6 +5,7 @@ import 'package:FlutterARKit/test_page/real_time_updates.dart';
 import 'package:FlutterARKit/test_page/tap_page.dart';
 import 'package:flutter/material.dart';
 
+import 'demo_page/figer_hit_page.dart';
 import 'test_page/plane_detection_page.dart';
 
 void main() => runApp(MaterialApp(home: MyApp()));
@@ -17,10 +18,16 @@ class MyApp extends StatelessWidget {
         'Magician Demo',
         'magician demo Page.',
         Icons.blur_on,
-            () => Navigator.of(context).push<void>(
-            MaterialPageRoute(builder: (c) => MagicianDemoPage())),
+        () => Navigator.of(context)
+            .push<void>(MaterialPageRoute(builder: (c) => MagicianDemoPage())),
       ),
-
+      Sample(
+        'Magician Hit Demo',
+        'magician figer hit page.',
+        Icons.blur_on,
+        () => Navigator.of(context)
+            .push<void>(MaterialPageRoute(builder: (c) => FigerHitePage())),
+      ),
 
       /*Sample(
         'Plane build Item Detection',
@@ -37,7 +44,7 @@ class MyApp extends StatelessWidget {
             MaterialPageRoute(builder: (c) => PlaneBuildAxisPage())),
       )*/
 
-   /*   Sample(
+      /*   Sample(
         'Hello World',
         'The simplest scene with all geometries.',
         Icons.home,
@@ -62,10 +69,10 @@ class MyApp extends StatelessWidget {
         'Tap',
         'Sphere which handles tap event.',
         Icons.touch_app,
-            () => Navigator.of(context)
+        () => Navigator.of(context)
             .push<void>(MaterialPageRoute(builder: (c) => TapPage())),
       ),
-  /*,
+      /*,
       Sample(
         'Distance tracking',
         'Detects horizontal plane and track distance on it.',
@@ -168,7 +175,7 @@ class MyApp extends StatelessWidget {
         'Real Time Updates',
         'Calls a function once per frame',
         Icons.timer,
-            () => Navigator.of(context).push<void>(
+        () => Navigator.of(context).push<void>(
             MaterialPageRoute(builder: (c) => RealTimeUpdatesPage())),
       ),
     ];
@@ -178,7 +185,7 @@ class MyApp extends StatelessWidget {
         title: const Text('ARKit Demo'),
       ),
       body:
-      ListView(children: samples.map((s) => SampleItem(item: s)).toList()),
+          ListView(children: samples.map((s) => SampleItem(item: s)).toList()),
     );
   }
 }
@@ -210,6 +217,7 @@ class SampleItem extends StatelessWidget {
 
 class Sample {
   const Sample(this.title, this.description, this.icon, this.onTap);
+
   final String title;
   final String description;
   final IconData icon;
