@@ -355,7 +355,7 @@ class FigerHitePageState extends State<FigerHitePage> {
           distancey.toStringAsFixed(4) +
           "  z:" +
           distancez.toStringAsFixed(4));
-      connectTool.ptpCmd(-distancez, -200-distanceX,-distancey+50,0).then(handleCmdPTP);
+      connectTool.ptpCmd(-distancez+25, -200-distanceX+25,-distancey+40,0).then(handleCmdPTP);
     });
     // connectTool.ptpCmd(200, 70, -90,0)
   }
